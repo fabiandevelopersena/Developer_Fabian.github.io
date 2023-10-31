@@ -22,7 +22,7 @@ html {
 }
 
 body {
-	background-image: url('Assets/trama 496391.png');
+	background-image: url('./Assets/trama\ 496391.svg') !important;
 	background-size: 2800px;
 	background-position: center;
 	background-repeat: no-repeat;
