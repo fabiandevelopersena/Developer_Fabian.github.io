@@ -25,15 +25,19 @@ html {
 
 body {
 	background-image: url('https://cdn.glitch.global/278318fd-2176-4e07-9e0d-62960044c23b/trama-jpg.jpg?v=1698886209892');
-	background-size: 4900px;
 	background-position: center;
 	background-repeat: no-repeat;
-	font-family: 'Nuit', sans-serif;
+	font-family: 'Courier';
+	src: url(/courier-new/Courier\ New.ttf) format('opentype'),
+		url(/courier-new/Courier\ New\ Bold\ Italic\ font.ttf) format('opentype');
+	font-family: 'Nuit';
+	src: url('/nuit/Nuit Bold.otf') format('opentype'),
+		url('/nuit/Nuit Bold Italic.otf') format('opentype');
 	font-size: 16px;
 	line-height: 1.6;
 	max-width: 100% !important;
 	overflow-x: hidden !important;
-	overflow-y: hidden;
+	overflow-y: hidden !important;
 }
 
 /* body::-webkit-scrollbar {
@@ -65,8 +69,18 @@ body::-webkit-scrollbar-thumb {
 	border-bottom: 2px solid #158e7b;
 } */
 
+/* Title */
 .title {
-	margin-top: 1%;
+}
+h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 9vh;
+	position: relative;
+	top: 48px;
+	color: #cbe2f3;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 .mouse {
 	position: relative;
@@ -74,81 +88,83 @@ body::-webkit-scrollbar-thumb {
 	left: 20px;
 }
 
-h1 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 8vh;
-	position: relative;
-	top: 40px;
-	color: #cbe2f3;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
 span {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	font-family: 'Nuit', sans-serif;
 	bottom: 40px;
-	font-size: 15vh;
+	font-size: 17vh;
 	color: #cbe2f3;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
-.pc {
-	display: flex;
-	position: relative;
-	bottom: 190px;
+.lapiz {
 }
 
-.escritorio {
-}
-
-.whats {
-	color: #cbe2f3;
-	text-shadow: 2px 2px 4px rgb(12, 29, 54);
-	font-size: 30px;
-	font-family: 'Nuit';
-	font-weight: 700;
-	text-align: justify;
-	margin-left: 5%;
-}
-
-.whatsApp {
-	position: absolute;
-	top: 73%;
-	left: 15%;
-	font-size: 10px;
-	font-family: 'Nuit';
-	font-style: normal;
-	font-weight: 600;
-}
+/* Parrafo */
 .text-content {
-	float: left;
-	padding: 130px;
-	text-align: left;
 }
-
 h3 {
 	color: #0c1d36;
 	text-shadow: 2px 2px 4px rgb(203, 226, 243, 0.7);
-	margin-left: 3%;
-	font-size: 38px;
+	display: flex;
+	margin: 6vh;
+	font-size: 6vh;
+	position: relative;
+	bottom: 14vh;
 	font-family: 'Nuit';
 	font-style: normal;
 	font-weight: 700;
 	text-align: justify;
 }
-
 p {
 	color: #cbe2f3;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-	margin: 3%;
-	margin-top: -3%;
-	font-size: 18px;
+	font-size: 3vh;
+	margin: 6vh;
+	position: relative;
+	bottom: 18vh;
 	font-family: 'Courier';
 	font-style: normal;
 	font-weight: 600;
 	text-align: justify;
+}
+
+/* Slider Iconos */
+
+.slider {
+	position: relative;
+	bottom: 32vh;
+	overflow: hidden;
+	height: 100px;
+	padding: 6em 6em;
+}
+
+.icons {
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	animation: scroll 60s linear infinite;
+	border-radius: 100%;
+	filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
+}
+
+.slide-track {
+	width: 100%;
+	display: flex;
+	gap: 3em;
+	white-space: nowrap;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translatex(-1000%);
+	}
 }
